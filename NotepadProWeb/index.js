@@ -1,7 +1,9 @@
 function download() {
-    var text = document.getElementById("Pricing").value;
-    var filename = document.getElementById("FAQ").value;
-    var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-    window.URL.createObjectURL(blob);
-    console.log(blob.text.length);
+    let url = './public/external/svgexport-58.svg'
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'image.svg'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
 }
