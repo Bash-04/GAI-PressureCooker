@@ -35,10 +35,10 @@
             // 
             // WebcamPictureBox
             // 
-            this.WebcamPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.WebcamPictureBox.Location = new System.Drawing.Point(0, 60);
+            this.WebcamPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WebcamPictureBox.Location = new System.Drawing.Point(0, 0);
             this.WebcamPictureBox.Name = "WebcamPictureBox";
-            this.WebcamPictureBox.Size = new System.Drawing.Size(800, 390);
+            this.WebcamPictureBox.Size = new System.Drawing.Size(800, 450);
             this.WebcamPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.WebcamPictureBox.TabIndex = 0;
             this.WebcamPictureBox.TabStop = false;
@@ -46,12 +46,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(463, 33);
+            this.label1.Size = new System.Drawing.Size(460, 33);
             this.label1.TabIndex = 1;
-            this.label1.Text = "This is what you agreed to share with us";
+            this.label1.Text = "This is what you agreed to share with Notepad Pro!";
             // 
             // FullScreenForm
             // 
@@ -67,6 +67,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 
