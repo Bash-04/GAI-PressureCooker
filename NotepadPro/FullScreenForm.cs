@@ -10,15 +10,18 @@ namespace NotepadPro
     {
         private const int webcamWidth = 1280;
         private const int webcamHeight = 720;
+        private const int autoCloseDelay = 120000; // 2 minutes
 
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
+        private Timer timer;
 
         public FullScreenForm()
         {
             InitializeComponent();
             SetupFullScreen();
             StartWebcam();
+            StartAutoCloseTimer();
         }
 
         private void SetupFullScreen()
@@ -57,6 +60,19 @@ namespace NotepadPro
             WebcamPictureBox.Image = webcamImage;
         }
 
+        private void StartAutoCloseTimer()
+        {
+            timer = new Timer();
+            timer.Interval = autoCloseDelay;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void FullScreenForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Stop capturing when the form is closing
@@ -66,6 +82,11 @@ namespace NotepadPro
                 videoSource.WaitForStop();
                 videoSource = null;
             }
+        }
+
+        private void WebcamPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
