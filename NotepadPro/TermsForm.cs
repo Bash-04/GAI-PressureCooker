@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotepadPro;
+using System;
 using System.Windows.Forms;
 
 namespace NotepadProInstaller
@@ -15,8 +16,8 @@ namespace NotepadProInstaller
         private void AgreeButton_Click(object sender, EventArgs e)
         {
             TermsAgreed = true;
+            new FullScreenForm().Show();
             this.DialogResult = DialogResult.OK;
-            this.Close();
         }
 
         private void DisagreeButton_Click(object sender, EventArgs e)
@@ -24,6 +25,11 @@ namespace NotepadProInstaller
             TermsAgreed = false;
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void TermsTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

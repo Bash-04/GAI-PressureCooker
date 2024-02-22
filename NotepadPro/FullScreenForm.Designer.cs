@@ -37,8 +37,9 @@
             // 
             this.WebcamPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WebcamPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.WebcamPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WebcamPictureBox.Name = "WebcamPictureBox";
-            this.WebcamPictureBox.Size = new System.Drawing.Size(800, 450);
+            this.WebcamPictureBox.Size = new System.Drawing.Size(1067, 554);
             this.WebcamPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.WebcamPictureBox.TabIndex = 0;
             this.WebcamPictureBox.TabStop = false;
@@ -47,19 +48,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 33);
+            this.label1.Size = new System.Drawing.Size(742, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "This is what you agreed to share with Notepad Pro!";
             // 
             // FullScreenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.WebcamPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FullScreenForm";
             this.Text = "Notepad Pro - Full Screen";
             ((System.ComponentModel.ISupportInitialize)(this.WebcamPictureBox)).EndInit();
